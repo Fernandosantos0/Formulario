@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Formulário de preenchimento</title>
+		<meta name="description" content="Esse é uma revisão de desenvolvimento de Formulário html e css">
+		<meta name="keywords" content="revisão, html, css, desenvolvimento, formulário">
+		<meta name="author" content="Fernando Santos">
+		<meta name="generation" content="Sublime Text">
+		<link rel="author" href="#">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/icon" href="imagens/favicon.ico">
+		<!-- CSS -->
+		<style type="text/css">
+			@import url(css/folhaEstilo.css);
+		</style>
+	</head> <!-- Cabeça -->
+	<body id="interface">
+		
+        <!-- Início da div de agrupamento do formulário --> 
+		<div id="conteiner">
+			<main id="formulario">
+                
+                <h3>Formulário para o preenchimento</h3>
+				
+				<!-- Início do formulário -->
+				<form action="" method="POST" accept-charset="utf-8">
+                   
+                    <fieldset>
+                        <legend>Informação de identificação</legend>
+                        <div class="espaco-baixo">
+                           <label for="txtNome">Nome:</label>
+                           <input type="text" name="campoNome" id="txtNome" placeholder="Nome" required>
+                        </div>
+
+                        <div class="espaco-baixo">
+                           <label for="txtSnome">Sobrenome:</label>
+                           <input type="text" name="campoSnome" id="txtSnome" placeholder="Sobrenome" required>
+                        </div>
+                        
+                        <div class="espaco-baixo">
+                            <label for="cpf">CPF:</label>
+                            <input type="text" name="numCPF" id="cpf" placeholder="CPF" required pattern="[0-9]{11}">
+                        </div>
+                        
+                        <div>
+                            <label for="anoNasc">Ano do seu nascimento:</label>
+                            <input type="date" name="campoNasc" id="anoNasc" required>
+                        </div>
+                        
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Informações de contatos</legend>
+                        <div class="espaco-baixo">
+                           <label for="txtEmail">E-mail:</label>
+                            <input type="email" name="campoEmail" id="txtEmail" placeholder="E-mail" required>
+                        </div>
+
+                        <div>
+                            <label for="txtTel">Telefone celular:</label>
+                            <input type="tel" name="campoTel" id="txtTel" placeholder="(99) 99999-9999" required pattern="^\(?[1-9]{2}\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$">
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Localização</legend>
+                        <div class="espaco-baixo">
+                            <label for="estado">Selecione seu estado:</label>
+                            <select name="slc-Estado" id="estado">
+                                <option disabled value="" selected>Selecione</option>
+                                
+                                <!-- Início da Região Norte -->
+                                <optgroup label="Região Norte">
+                                    <option value="am">Amazonas</option>
+                                    <option value="rr">Roraima</option>
+                                    <option value="pa">Pará</option>
+                                    <option value="to">Tocantins</option>
+                                    <option value="ro">Rondônia</option>
+                                    <option value="ac">Acre</option>
+                                </optgroup>
+                                <!-- Fim da Região Norte -->
+                                
+                                <!-- Início da Região Nordeste -->
+                                <optgroup label="Região Nordeste">
+                                    <option value="ma">Maranhão</option>
+                                    <option value="pi">Piauí</option>
+                                    <option value="ce">Ceará</option>
+                                    <option value="rn">Rio Grande do Norte</option>
+                                    <option value="pe">Pernambuco</option>
+                                    <option value="pb">Paraíba</option>
+                                    <option value="se">Sergipe</option>
+                                    <option value="al">Alagoas</option>
+                                    <option value="ba">Bahia</option>
+                                </optgroup>
+                                <!-- Fim da Região Centro-Oeste -->
+                                
+                                <!-- Início da Região Centro-Oeste -->
+                                <optgroup label="Região Centro-Oeste">
+                                    <option value="mt">Mato Grosso</option>
+                                    <option value="ms">Mato Grosso do Sul</option>
+                                    <option value="go">Goiás</option>
+                                </optgroup>
+                                <!-- Fim da Região Centro-Oeste -->
+                                
+                                <!-- Início da Região Sudeste -->
+                                <optgroup label="Região Sudeste">
+                                    <option value="rj">Rio de Janeiro</option>
+                                    <option value="es">Espírito Santo</option>
+                                    <option value="sp">São Paulo</option>
+                                    <option value="mg">Minas Gerais</option>
+                                </optgroup>
+                                <!-- Fim da Região Sudeste -->
+                                
+                                <!-- Início da Região Sul -->
+                                <optgroup label="Região Sul">
+                                    <option value="pr">Paraná</option>
+                                    <option value="rs">Rio Grande do Sul</option>
+                                    <option value="sc">Santa Catarina</option>
+                                </optgroup>
+                                <!-- Fim da Região Sul -->
+                            </select>
+                        </div>
+                        
+                        <div class="espaco-baixo">
+                            <label for="txtMunicipio">Município:</label>
+                            <input type="text" name="campoCidade" placeholder="Cidade" required maxlength="100">
+                        </div>
+                        
+                        <div class="espaco-baixo">
+                            <label for="txtBarro">Bairro:</label>
+                            <input type="text" name="campoBairro" placeholder="Bairro" required>
+                        </div>
+                        
+                        <div class="espaco-baixo">
+                            <label for="txtRua">Rua:</label>
+                            <input type="text" name="campoRua" placeholder="Rua" id="txtRua" required>
+                        </div>
+                        
+                        <div>
+                            <label for="num">Número:</label>
+                            <input type="number" name="numCasa" placeholder="N° da casa" id="num" required>
+                        </div>
+                        
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Aviso</legend>
+                        <div>
+                            <label label="aviso">Você que recebe aviso no seu e-mail?</label> <br>
+                            
+                            <input type="radio" name="opcao-aviso" value="N" id="not" checked>
+                            <label for="not">Não</label>
+                            
+                            <input type="radio" name="opcao-aviso" value="S" id="yes">
+                            <label for="yes">Sim</label>
+                            
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Upload de arquivo:</legend>
+                        <input type="file" name="arquivo" multiple>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Botões</legend>
+                        <!-- Botão -->
+                        <div id="btns-formulario">
+                            <button type="submit">
+                                Enviar
+                            </button> <!-- Botão de envio -->
+
+                            <button type="reset">
+                                Limpar
+                            </button> <!-- Botão de limpar -->                    
+                        </div>
+                        <!-- Fim botão -->
+                    </fieldset>
+
+				</form>
+				<!-- Final do formulário -->
+
+			</main>
+		</div>
+        <!-- Final da div de agrupamento do formulário --> 
+
+	</body> <!-- Corpo -->
+</html>
